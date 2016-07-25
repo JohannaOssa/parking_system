@@ -5,8 +5,7 @@ ruby '2.3.1'
 gem 'rails', '4.2.6'
 
 gem 'devise'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'bootstrap-sass'
 gem 'validates_timeliness', '~> 4.0'
 # Use SCSS for stylesheets
@@ -39,6 +38,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
