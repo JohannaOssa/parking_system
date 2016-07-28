@@ -1,0 +1,27 @@
+<h1>Registered Vehicles</h1>
+
+<table border="1" style="width:50%">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Vin</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicles.each do |vehicle| %>
+      <tr>
+        <td><%= vehicle.model %></td></br>
+        <td><%= vehicle.vin %></td>
+        <td><%= vehicle.year %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</br>
+<div>
+  <%= button_to "Add Vehicle",
+  new_user_vehicle_path(current_user) %>
+</div>

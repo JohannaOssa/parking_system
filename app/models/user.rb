@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :vehicles
 
-before_save :admin
+after_save :admin
 
 def admin
   self.is_admin = false
