@@ -1,0 +1,29 @@
+<h1>Locations</h1>
+
+<table border="1" style="width:50%">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |loc| %>
+      <tr>
+        <td><%= loc.address %></td>
+        <td><%= loc.name %></td>
+        <td><%= loc.latitude %></td>
+        <td><%= loc.longitude %></td>
+        <td><%= loc.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</br>
+<div>
+  <%= link_to "Add Location", new_location_path, class: 'btn btn-default'%>
+</div>
