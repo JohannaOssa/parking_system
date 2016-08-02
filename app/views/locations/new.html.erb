@@ -1,6 +1,10 @@
 <%= form_for @location, url:{action:'create'} do |f| %>
 
-<h1>Register Location</h1>
+<div class="row" >
+  <div class="col-md-6">
+    <h1 class="text-center">Register Location</h1>
+  </div>
+</div>
 
 <form class="form" role="form">
   <div class="form-group">
@@ -24,11 +28,12 @@
     </div>
   </div>
     </br>
-  <div class="form-group" "actions">
-    <div class="col-lg-12">
-      <%= f.submit "Register"%>
+    </br>
+    <div class="form-group">
+      <%= f.submit "Register", class: 'btn btn-success'%>
+      <%= link_to "Cancel", locations_path, class: 'btn btn-default'%>
     </div>
-  </div>
+  </br>
   </br>
 </div>
 </form>
