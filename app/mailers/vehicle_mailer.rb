@@ -1,7 +1,7 @@
 class VehicleMailer < ApplicationMailer
 default from: 'notifications@parkingsystem.com'
 
- def new_vehicle_mailer(user)
+ def new_vehicle_mailer(user, vehicle)
    @user = user
    if Rails.env == 'development'
      @url = "localhost:3000/users/#{user.id}/vehicles"
